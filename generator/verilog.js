@@ -1,22 +1,14 @@
-// generator/verilog.js
-(function () {
-  "use strict";
-  console.log("verilog.js chargé ✅");
-
-  window.generateVerilog = function (gate = "AND") {
-    gate = gate.toUpperCase();
-    let op = gate === "OR" ? "|" : gate === "XOR" ? "^" : "&";
-
+function generateVerilog(logic) {
+  if (logic.type === "adder") {
     return `
-module logic_gate (
-  input wire A,
-  input wire B,
-  output wire Y
+module adder_${logic.bits}bit (
+  input  [${logic.bits-1}:0] a,
+  input  [${logic.bits-1}:0] b,
+  output [${logic.bits-1}:0] sum
 );
-
-assign Y = A ${op} B;
-
+  assign sum = a + b;
 endmodule
-`.trim();
-  };
-})();
+`;
+  }
+  return "// Unsupported logic";
+}
