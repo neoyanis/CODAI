@@ -1,47 +1,11 @@
 
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <title>CODAI – Intelligent Hardware IDE</title>
-  <link rel="stylesheet" href="theme/redblack.css">
-</head>
-<body>
-
-<header>
-  <h1>🔥 CODAI</h1>
-  <p>AI Hardware IDE • FPGA • MCU • Logic</p>
-</header>
-
-<div class="container">
-
-  <!-- LEFT : Project -->
-  <aside class="sidebar">
-    <h3>📁 Project</h3>
-    <ul id="fileList">
-      <li>main.v</li>
-    </ul>
-  </aside>
-
-  <!-- CENTER : Editor -->
-  <main>
-    <textarea id="editor" spellcheck="false">
-// Code will appear here
-    </textarea>
-  </main>
-
-  <!-- RIGHT : AI -->
-  <aside class="ai-panel">
-    <h3>🧠 AI Prompt</h3>
-    <textarea id="prompt" placeholder="FR: Additionneur 8 bits
-EN: 8-bit adder with register"></textarea>
-    <button onclick="generate()">Generate / Générer</button>
-  </aside>
-
-</div>
-
 <script src="ai/prompt.js"></script>
+
 <script src="generator/verilog.js"></script>
+<script src="generator/vhdl.js"></script>
+<script src="generator/arduino.js"></script>
+<script src="generator/cpp.js"></script>
+
+<script src="simulator/simulator.js"></script>
+
 <script src="app.js"></script>
-</body>
-</html>
