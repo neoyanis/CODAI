@@ -1,67 +1,47 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>CODAI – FPGA & Logic Generator</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #e5e7eb;
-      padding: 20px;
-    }
-    h1 { color: #38bdf8; }
-    select, button, textarea {
-      width: 100%;
-      margin: 8px 0;
-      padding: 8px;
-      font-size: 16px;
-    }
-    textarea {
-      height: 260px;
-      background: #020617;
-      color: #22c55e;
-      font-family: monospace;
-    }
-    button {
-      background: #38bdf8;
-      border: none;
-      cursor: pointer;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <title>CODAI – Intelligent Hardware IDE</title>
+  <link rel="stylesheet" href="theme/redblack.css">
 </head>
-
 <body>
-  <h1>CODAI ⚡</h1>
-  <p>Générateur de code logique & FPGA</p>
 
-  <label>Langage :</label>
-  <select id="language">
-    <option value="verilog">Verilog</option>
-    <option value="vhdl">VHDL</option>
-    <option value="arduino">Arduino</option>
-    <option value="cpp">C++</option>
-    <option value="html">HTML</option>
-  </select>
+<header>
+  <h1>🔥 CODAI</h1>
+  <p>AI Hardware IDE • FPGA • MCU • Logic</p>
+</header>
 
-  <label>Porte logique :</label>
-  <select id="gate">
-    <option value="AND">AND</option>
-    <option value="OR">OR</option>
-    <option value="XOR">XOR</option>
-  </select>
+<div class="container">
 
-  <button onclick="CODAI.generate()">Générer le code</button>
-  <button onclick="CODAI.copyCode()">Copier</button>
+  <!-- LEFT : Project -->
+  <aside class="sidebar">
+    <h3>📁 Project</h3>
+    <ul id="fileList">
+      <li>main.v</li>
+    </ul>
+  </aside>
 
-  <textarea id="output" placeholder="Le code généré apparaîtra ici..."></textarea>
+  <!-- CENTER : Editor -->
+  <main>
+    <textarea id="editor" spellcheck="false">
+// Code will appear here
+    </textarea>
+  </main>
 
-  <!-- ORDRE CRUCIAL -->
-  <script src="generator/verilog.js"></script>
-  <script src="generator/vhdl.js"></script>
-  <script src="generator/arduino.js"></script>
-  <script src="generator/cpp.js"></script>
-  <script src="generator/html.js"></script>
-  <script src="app.js"></script>
+  <!-- RIGHT : AI -->
+  <aside class="ai-panel">
+    <h3>🧠 AI Prompt</h3>
+    <textarea id="prompt" placeholder="FR: Additionneur 8 bits
+EN: 8-bit adder with register"></textarea>
+    <button onclick="generate()">Generate / Générer</button>
+  </aside>
+
+</div>
+
+<script src="ai/prompt.js"></script>
+<script src="generator/verilog.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
