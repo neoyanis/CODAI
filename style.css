@@ -1,39 +1,30 @@
-/* ===== CODAI UNICK THEME ===== */
-
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 body {
-  background: radial-gradient(circle at top, #1a0000, #000000);
-  color: #f2f2f2;
-  min-height: 100vh;
+  margin: 0;
+  background: radial-gradient(circle at top, #200000, #000);
+  color: #eee;
 }
 
-/* ===== HEADER ===== */
 header {
-  padding: 20px;
   text-align: center;
-  border-bottom: 1px solid #330000;
+  padding: 20px;
+  border-bottom: 1px solid #400;
 }
 
 header h1 {
-  font-size: 2.5rem;
-  color: #ff1a1a;
+  color: #ff2020;
+  margin: 0;
   letter-spacing: 2px;
 }
 
 header small {
-  display: block;
-  margin-top: 5px;
   color: #aaa;
-  font-size: 0.75rem;
 }
 
-/* ===== MAIN ===== */
 main {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -41,75 +32,67 @@ main {
   padding: 20px;
 }
 
-/* ===== PANELS ===== */
 .panel {
-  background: rgba(20, 0, 0, 0.9);
-  border: 1px solid #400000;
+  background: #0b0000;
+  border: 1px solid #500;
   border-radius: 12px;
   padding: 15px;
-  box-shadow: 0 0 20px rgba(255, 0, 0, 0.15);
+  box-shadow: 0 0 20px rgba(255,0,0,0.2);
 }
 
-/* ===== INPUT ===== */
 textarea, select {
   width: 100%;
-  background: #0d0000;
-  border: 1px solid #550000;
-  border-radius: 8px;
+  margin-top: 10px;
+  background: #050000;
   color: #fff;
+  border: 1px solid #700;
+  border-radius: 8px;
   padding: 10px;
-  margin-bottom: 10px;
 }
 
 textarea {
   min-height: 120px;
-  resize: vertical;
 }
 
-/* ===== BUTTONS ===== */
 .buttons {
   display: flex;
   gap: 10px;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 button {
   flex: 1;
   padding: 12px;
-  border-radius: 10px;
+  background: linear-gradient(135deg, #ff0000, #990000);
   border: none;
+  border-radius: 10px;
+  color: white;
   font-weight: bold;
   cursor: pointer;
-  color: #fff;
-  background: linear-gradient(135deg, #ff0000, #990000);
-  box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
-  transition: all 0.2s ease;
+  box-shadow: 0 0 10px rgba(255,0,0,0.5);
 }
 
 button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+  box-shadow: 0 0 20px rgba(255,0,0,0.9);
 }
 
 button.secondary {
-  background: linear-gradient(135deg, #222, #000);
+  background: #111;
   border: 1px solid #ff0000;
 }
 
-/* ===== OUTPUT ===== */
 pre {
-  background: #050000;
-  border-radius: 10px;
-  padding: 15px;
+  background: #020000;
   color: #ffcccc;
+  padding: 15px;
+  border-radius: 10px;
+  min-height: 300px;
   overflow-x: auto;
-  min-height: 250px;
 }
 
-/* ===== FOOTER ===== */
 footer {
   text-align: center;
-  padding: 10px;
   color: #666;
-  font-size: 0.75rem;
+  padding: 10px;
+  font-size: 12px;
 }
