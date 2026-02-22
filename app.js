@@ -15,7 +15,6 @@ function generateCode() {
     else if (prompt.includes("compteur")) code = verilogCounter();
     else code = verilogBase();
   }
-
   if (lang === "vhdl") code = vhdlBase();
   if (lang === "arduino") code = arduinoBase();
   if (lang === "cpp") code = cppBase();
@@ -50,14 +49,46 @@ function exportFile() {
   a.click();
 }
 
-function upload() {
-  alert(
-    "Upload instructions:\n\n" +
-    "• FPGA: Vivado / Quartus\n" +
-    "• Arduino: Arduino IDE\n" +
-    "• C++: g++ / PlatformIO\n\n" +
-    "Export the file, then upload to your board."
-  );
+/* ===== UPLOAD ASSISTANT (V1 PRO) ===== */
+
+function uploadAssistant() {
+  const lang = document.getElementById("language").value;
+
+  let msg = "UPLOAD ASSISTANT\n\n";
+
+  if (lang === "arduino") {
+    msg +=
+      "Arduino detected:\n" +
+      "1) Open Arduino IDE\n" +
+      "2) File → Open codai_unick.ino\n" +
+      "3) Select Board & Port\n" +
+      "4) Click Upload";
+  }
+
+  else if (lang === "verilog" || lang === "vhdl") {
+    msg +=
+      "FPGA detected:\n" +
+      "1) Open Vivado or Quartus\n" +
+      "2) Create new project\n" +
+      "3) Add generated file\n" +
+      "4) Synthesize & Program";
+  }
+
+  else if (lang === "cpp") {
+    msg +=
+      "C++ project:\n" +
+      "1) Compile with g++ or PlatformIO\n" +
+      "2) Upload using your toolchain";
+  }
+
+  else if (lang === "html") {
+    msg +=
+      "HTML project:\n" +
+      "1) Open the file in a browser\n" +
+      "2) Or deploy on a web server";
+  }
+
+  alert(msg);
 }
 
 /* ===== CODE GENERATORS ===== */
