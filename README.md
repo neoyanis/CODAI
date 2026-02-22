@@ -1,5 +1,4 @@
-# CODAI
-fpga no code app 
+
 # CODAI UNICK
 
 **CODAI UNICK** is a serious, no-simulation, code generation web app.
