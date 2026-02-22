@@ -5,7 +5,7 @@
 
 body {
   margin: 0;
-  background: radial-gradient(circle at top, #200000, #000);
+  background: radial-gradient(circle at top, #220000, #000);
   color: #eee;
 }
 
@@ -23,6 +23,7 @@ header h1 {
 
 header small {
   color: #aaa;
+  font-size: 12px;
 }
 
 main {
@@ -37,7 +38,7 @@ main {
   border: 1px solid #500;
   border-radius: 12px;
   padding: 15px;
-  box-shadow: 0 0 20px rgba(255,0,0,0.2);
+  box-shadow: 0 0 20px rgba(255,0,0,0.25);
 }
 
 textarea, select {
@@ -51,7 +52,7 @@ textarea, select {
 }
 
 textarea {
-  min-height: 120px;
+  min-height: 130px;
 }
 
 .buttons {
@@ -86,7 +87,7 @@ pre {
   color: #ffcccc;
   padding: 15px;
   border-radius: 10px;
-  min-height: 300px;
+  min-height: 320px;
   overflow-x: auto;
 }
 
