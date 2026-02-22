@@ -1,28 +1,39 @@
-// generator/vhdl.js
-(function () {
-  "use strict";
-  console.log("vhdl.js chargé ✅");
+function generateVerilog(type) {
+  if (type === "adder") {
+    return `// 8-bit Adder - Synthesizable Verilog
+module adder8 (
+  input  [7:0] A,
+  input  [7:0] B,
+  output [8:0] SUM
+);
+  assign SUM = A + B;
+endmodule
+`;
+  }
 
-  window.generateVHDL = function (gate = "AND") {
-    gate = gate.toUpperCase();
-    let op = gate === "OR" ? "or" : gate === "XOR" ? "xor" : "and";
+  if (type === "counter") {
+    return `// 8-bit Counter - Verilog
+module counter8 (
+  input clk,
+  input reset,
+  output reg [7:0] count
+);
+  always @(posedge clk or posedge reset) begin
+    if (reset)
+      count <= 8'b0;
+    else
+      count <= count + 1;
+  end
+endmodule
+`;
+  }
 
-    return `
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-
-entity logic_gate is
-  Port (
-    A : in STD_LOGIC;
-    B : in STD_LOGIC;
-    Y : out STD_LOGIC
-  );
-end logic_gate;
-
-architecture Behavioral of logic_gate is
-begin
-  Y <= A ${op} B;
-end Behavioral;
-`.trim();
-  };
-})();
+  return `// Verilog template
+module top (
+  input clk,
+  input reset
+);
+// Describe your logic here
+endmodule
+`;
+}
