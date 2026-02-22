@@ -10,10 +10,11 @@ function constanceThink(prompt, language) {
     type: "generic"
   };
 
-  // --- Warm introduction ---
-  response.message =
-    "🙂 Hello, I’m Constance AI.\n" +
-    "I’ve carefully analyzed your request.\n\n";
+  // --- Warm introduction ---response.message =
+  "🙂 Hello, I’m Constance AI.\n" +
+  "I analyze your project description in real time.\n" +
+  "I focus on generating professional, hardware-ready code.\n\n";
+  
 
   // --- Detect common hardware / software intents ---
   if (text.includes("adder") || text.includes("additionneur")) {
