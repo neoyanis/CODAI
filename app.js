@@ -1,3 +1,98 @@
-function generate() {
-  alert("Constance AI is alive");
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #200000, #000);
+  color: #eee;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  border-bottom: 1px solid #400;
+}
+
+header h1 {
+  color: #ff2020;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+header small {
+  color: #aaa;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.panel {
+  background: #0b0000;
+  border: 1px solid #500;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 0 20px rgba(255,0,0,0.2);
+}
+
+textarea, select {
+  width: 100%;
+  margin-top: 10px;
+  background: #050000;
+  color: #fff;
+  border: 1px solid #700;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+textarea {
+  min-height: 120px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+button {
+  flex: 1;
+  padding: 12px;
+  background: linear-gradient(135deg, #ff0000, #990000);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(255,0,0,0.5);
+}
+
+button:hover {
+  box-shadow: 0 0 20px rgba(255,0,0,0.9);
+}
+
+button.secondary {
+  background: #111;
+  border: 1px solid #ff0000;
+}
+
+pre {
+  background: #020000;
+  color: #ffcccc;
+  padding: 15px;
+  border-radius: 10px;
+  min-height: 300px;
+  overflow-x: auto;
+}
+
+footer {
+  text-align: center;
+  color: #666;
+  padding: 10px;
+  font-size: 12px;
 }
